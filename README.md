@@ -16,8 +16,10 @@ DS-AI v4.1 adalah sistem asisten pengembangan perangkat lunak otonom yang diranc
 ### 1. Persiapan Lingkungan Termux
 Jalankan perintah berikut untuk memastikan repositori dan paket dasar terinstal:
 
-```pkg update && pkg upgrade -y```
-````pkg install python git tmux nano -y```
+```bash
+pkg update && pkg upgrade -y
+```
+```pkg install python git tmux nano -y```
 ```termux-setup-storage```
 
 ### 2. Instalasi Dependensi Sistem
