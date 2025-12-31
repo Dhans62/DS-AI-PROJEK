@@ -19,10 +19,11 @@ Jalankan perintah berikut untuk memastikan repositori dan paket dasar terinstal:
 ```bash
 pkg update && pkg upgrade -y
 ```
-```bash
+'''bash
 pkg install python git tmux nano -y'''
+
 ```bash
-termux-setup-storage```
+termux-setup-storage'''
 
 ### 2. Instalasi Dependensi Sistem
 Instalasi pustaka pengolah gambar dan pustaka pendukung Python:
