@@ -16,26 +16,26 @@ DS-AI v4.1 adalah sistem asisten pengembangan perangkat lunak otonom yang diranc
 ### 1. Persiapan Lingkungan Termux
 Jalankan perintah berikut untuk memastikan repositori dan paket dasar terinstal:
 
-pkg update && pkg upgrade -y
-pkg install python git tmux nano -y
-termux-setup-storage
+```pkg update && pkg upgrade -y```
+````pkg install python git tmux nano -y```
+```termux-setup-storage```
 
 ### 2. Instalasi Dependensi Sistem
 Instalasi pustaka pengolah gambar dan pustaka pendukung Python:
 
-pkg install python-pillow -y
-pip install flask requests
+```pkg install python-pillow -y```
+```pip install flask requests```
 
 ### 3. Konfigurasi Proyek
 Kloning atau buat direktori kerja dan siapkan struktur folder yang diperlukan:
 
-mkdir -p ~/build-apk/core ~/build-apk/uploads
-cd ~/build-apk
+```mkdir -p ~/build-apk/core ~/build-apk/uploads```
+```cd ~/build-apk```
 
 ### 4. Pengaturan Variabel Lingkungan (Environment Variables)
 Tambahkan kunci API ke dalam konfigurasi shell agar sistem dapat mengakses model AI. Buka file .bashrc:
 
-nano ~/.bashrc
+```nano ~/.bashrc```
 
 Tambahkan baris berikut di akhir file:
 
@@ -46,13 +46,13 @@ export OPENROUTER_KEY="kunci_anda"
 ### 5. Menjalankan Sistem
 Gunakan Tmux untuk memastikan proses tetap berjalan di latar belakang:
 
-tmux new -s ai
-python3 ai_gui.py
+```tmux new -s ai```
+```python3 ds_gui.py```
 
-Akses antarmuka web melalui browser pada alamat: http://127.0.0.1:5000
+Akses antarmuka web melalui browser pada alamat: ```http://127.0.0.1:5000```
 
 ## Struktur File Proyek
-- ai_gui.py: Server web Flask dan antarmuka pengguna.
+- ds_gui.py: Server web Flask dan antarmuka pengguna.
 - core/engine.py: Logika utama komunikasi dengan API Model AI.
 - core/utils.py: Utilitas untuk kompresi gambar dan validasi kode.
 - core/actions.py: Handler untuk operasi file sistem otonom.
