@@ -19,29 +19,40 @@ Jalankan perintah berikut untuk memastikan repositori dan paket dasar terinstal:
 ```bash
 pkg update && pkg upgrade -y
 ```
-```bash pkg install python git tmux nano -y```
+```bash
+pkg install python git tmux nano -y
+```
 
 ```bash
-termux-setup-storage'''
+termux-setup-storage
+```
 
 ### 2. Instalasi Dependensi Sistem
 Instalasi pustaka pengolah gambar dan pustaka pendukung Python:
 
 ```bash
-pkg install python-pillow -y```
+pkg install python-pillow -y
+```
 ```bash
-pip install flask requests```
+pip install flask requests
+```
 
 ### 3. Konfigurasi Proyek
 Kloning atau buat direktori kerja dan siapkan struktur folder yang diperlukan:
 
-```mkdir -p ~/build-apk/core ~/build-apk/uploads```
-```cd ~/build-apk```
+```bash
+mkdir -p ~/build-apk/core ~/build-apk/uploads
+```
+```bash
+cd ~/build-apk
+```
 
 ### 4. Pengaturan Variabel Lingkungan (Environment Variables)
 Tambahkan kunci API ke dalam konfigurasi shell agar sistem dapat mengakses model AI. Buka file .bashrc:
 
-```nano ~/.bashrc```
+```bash
+nano ~/.bashrc
+```
 
 Tambahkan baris berikut di akhir file:
 
@@ -52,10 +63,17 @@ export OPENROUTER_KEY="kunci_anda"
 ### 5. Menjalankan Sistem
 Gunakan Tmux untuk memastikan proses tetap berjalan di latar belakang:
 
-```tmux new -s ai```
-```python3 ds_gui.py```
+```bash
+tmux new -s ai
+```
+```bash
+python3 ds_gui.py
+```
 
-Akses antarmuka web melalui browser pada alamat: ```http://127.0.0.1:5000```
+Akses antarmuka web melalui browser pada alamat: 
+```bash
+http://127.0.0.1:5000
+```
 
 ## Struktur File Proyek
 - ds_gui.py: Server web Flask dan antarmuka pengguna.
