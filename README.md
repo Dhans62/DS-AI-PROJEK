@@ -41,10 +41,10 @@ pip install flask requests
 Kloning atau buat direktori kerja dan siapkan struktur folder yang diperlukan:
 
 ```bash
-mkdir -p ~/build-apk/core ~/build-apk/uploads
+mkdir -p ~/ds-ai/core ~/ds-ai/uploads
 ```
 ```bash
-cd ~/build-apk
+cd ~/ds-ai
 ```
 
 ### 4. Pengaturan Variabel Lingkungan (Environment Variables)
